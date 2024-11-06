@@ -1,0 +1,120 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Purple-blue gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Main Grid Container */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 250px 175px 175px;
+  gap: 25px 50px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Task Input and Date Input */
+#input-task,
+#task-date {
+  font-size: 1em;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffecd2; /* Light pastel orange */
+  color: #333;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#input-task:focus,
+#task-date:focus {
+  background-color: #ffe4b5; /* Soft peach */
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Add Button Styling */
+#addbtn {
+  background-color: #3ac569; /* Bright mint green */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#addbtn:hover {
+  background-color: #2ea251; /* Darker mint green */
+}
+
+#addbtn:active {
+  transform: scale(0.95);
+}
+
+/* Delete Button Styling */
+#delbtn {
+  background-color: #ff6b6b; /* Bright coral red */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#delbtn:hover {
+  background-color: #e63946; /* Darker red */
+}
+
+#delbtn:active {
+  transform: scale(0.95);
+}
+
+/* Task List Items */
+.listContainer div {
+  background-color: #ffffff; /* White background for tasks */
+  color: #333; /* Dark text for contrast */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.listContainer div:hover {
+  background-color: #f1f1f1; /* Light grey on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+    gap: 15px;
+  }
+}
